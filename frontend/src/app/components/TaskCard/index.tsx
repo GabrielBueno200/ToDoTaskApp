@@ -9,14 +9,14 @@ type filterOptions = "finished" | "pendent" | "all";
 const TaskCard = () => {
   const { tasks, pendentTasks, finishedTasks } = useContext(TaskContext);
 
-  const [filterOption, setFilterOption] = useState<
+  const [statusFilterOption, setStatusFilterOption] = useState<
     "finished" | "pendent" | "all"
   >("all");
 
   const [descriptionFilter, setDescriptionFilter] = useState("");
 
   useEffect(() => {
-    setFilterOption("all");
+    setStatusFilterOption("all");
   }, [descriptionFilter]);
 
   const handleSetDescriptionFilter = (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -29,14 +29,15 @@ const TaskCard = () => {
   const filteredTasks =
     descriptionFilter.length > 0
       ? tasksFilteredByDescription
-      : filterOption === "finished"
+      : statusFilterOption === "finished"
       ? finishedTasks
-      : filterOption === "pendent"
+      : statusFilterOption === "pendent"
       ? pendentTasks
       : tasks;
 
-  const handleSetFilterOption = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setFilterOption(e.target.value as filterOptions);
+  const handleSetStatusFilterOption = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => setStatusFilterOption(e.target.value as filterOptions);
 
   return (
     <div className="bg-slate-300 md:w-2/5 sm:w-8/12 rounded-lg p-7 shadow-lg">
@@ -53,7 +54,7 @@ const TaskCard = () => {
         />
         <div className="flex">
           <AiFillFilter size={24} />
-          <select onChange={handleSetFilterOption} value={filterOption}>
+          <select onChange={handleSetStatusFilterOption} value={statusFilterOption}>
             <option value="all">Todas</option>
             <option value="pendent">Pendentes</option>
             <option value="finished">Finalizadas</option>
