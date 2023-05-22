@@ -21,7 +21,7 @@ public class DeleteToDoTaskCommandHandler : IRequestHandler<DeleteToDoTaskComman
         // Validation
         var taskExists = (await _repository.GetTaskById(request.Id)) != null;
         if (!taskExists)
-            throw new NotFoundException($"Task with id {request.Id} was not found");
+            throw new NotFoundException($"Tarefa com id {request.Id} não foi encontrada");
 
         // Result
         await _repository.DeleteToDoTaskAsync(request.Id);

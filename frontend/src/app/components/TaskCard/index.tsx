@@ -24,7 +24,7 @@ const TaskCard = () => {
     setFilterOption(e.target.value as filterOptions);
 
   return (
-    <div className="bg-slate-300 h-4/5 md:w-2/5 sm:w-8/12 rounded-lg p-7 shadow-lg">
+    <div className="bg-slate-300 md:w-2/5 sm:w-8/12 rounded-lg p-7 shadow-lg">
       <h1 className="font-bold text-center p-4 text-lg">Lista de tarefas</h1>
 
       <TaskInput />

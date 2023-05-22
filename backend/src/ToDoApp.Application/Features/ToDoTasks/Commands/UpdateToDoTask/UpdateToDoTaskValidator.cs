@@ -8,9 +8,9 @@ public class UpdateToDoTaskValidator : AbstractValidator<UpdateToDoTaskCommand>
     {
         RuleFor(p => p.Description)
             .NotNull()
-            .NotEmpty().WithMessage("Task description is required");
+            .NotEmpty().WithMessage("A descrição da tarefa é obrigatória");
 
         RuleFor(p => p.IsFinished)
-            .NotNull().WithMessage("Task status is required");
+            .NotNull().WithMessage("O status da tarefa é obrigatório");
     }
 }

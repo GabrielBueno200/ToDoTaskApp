@@ -8,6 +8,6 @@ public class SaveToDoTaskCommandValidator : AbstractValidator<SaveToDoTaskComman
     {
         RuleFor(p => p.Description)
             .NotNull()
-            .NotEmpty().WithMessage("Task description is required");
+            .NotEmpty().WithMessage("A descrição da tarefa é obrigatória");
     }
 }

@@ -26,7 +26,7 @@ public class UpdateToDoTaskCommandHandler : IRequestHandler<UpdateToDoTaskComman
 
         var taskExists = (await _repository.GetTaskById(request.Id)) != null;
         if (!taskExists)
-            throw new NotFoundException($"Task with id {request.Id} was not found");
+            throw new NotFoundException($"Tarefa com id {request.Id} não foi encontrada");
 
         // Mapping
         var taskToUpdate = _mapper.Map<ToDoTask>(request);
