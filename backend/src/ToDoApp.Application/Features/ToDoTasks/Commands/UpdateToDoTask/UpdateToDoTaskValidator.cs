@@ -11,7 +11,6 @@ public class UpdateToDoTaskValidator : AbstractValidator<UpdateToDoTaskCommand>
             .NotEmpty().WithMessage("Task description is required");
 
         RuleFor(p => p.IsFinished)
-            .NotNull()
-            .NotEmpty().WithMessage("Task status is required");
+            .NotNull().WithMessage("Task status is required");
     }
 }
