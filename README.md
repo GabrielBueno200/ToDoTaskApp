@@ -46,7 +46,7 @@
 ## 💻 Sobre o projeto
 O projeto se trata da implementação de uma lista de tarefas a fazer (to do list), possuindo métodos de CRUD para esse fim. O projeto contempla tanto back quanto frontend.
 
-![image](https://github.com/GabrielBueno200/ToDoTaskApp/assets/56837996/444222e7-8d7a-4c74-ab8f-ee4b79fd4a48)
+![image](https://github.com/GabrielBueno200/ToDoTaskApp/assets/56837996/defc717d-3cb8-48c6-aa5c-82704204bfe5)
 
 
 <!-- HOW TO RUN -->
