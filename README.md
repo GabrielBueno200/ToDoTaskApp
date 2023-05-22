@@ -14,7 +14,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://github.com/GabrielBueno200/ToDoTaskApp/assets/56837996/bc0b4b09-cfc3-4d05-8a35-dc999f2ac40d" alt="Logo" width="200" height="200">
+    <img src="https://github.com/GabrielBueno200/ToDoTaskApp/assets/56837996/03472472-6f8d-4ff0-bef3-91b5f2794f4d" alt="Logo" width="200" height="200">
   </a>
 </p>
 
