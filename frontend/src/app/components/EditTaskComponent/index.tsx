@@ -48,7 +48,7 @@ const EditTaskComponent = ({
             className={`${!isFinished ? "opacity-100" : "opacity-50"}`}
           />
           <Button
-            title="Concluído"
+            title="Finalizada"
             onClick={() => handleIsFinished(true)}
             className={`${isFinished ? "opacity-100" : "opacity-50"}`}
           />
