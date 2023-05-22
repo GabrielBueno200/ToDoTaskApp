@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import Button from "../../common/Button";
+import Button from "../../common/components/Button";
 import TaskContext from "../../contexts/TaskContext";
 
 const TaskInput = () => {

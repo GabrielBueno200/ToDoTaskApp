@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { GiCancel, GiConfirmed } from "react-icons/gi";
-import Button from "../../common/Button";
+import Button from "../../common/components/Button";
 import TaskContext from "../../contexts/TaskContext";
 import { Task } from "../../types";
 

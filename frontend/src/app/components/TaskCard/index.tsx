@@ -26,7 +26,6 @@ const TaskCard = () => {
   return (
     <div className="bg-slate-300 md:w-2/5 sm:w-8/12 rounded-lg p-7 shadow-lg">
       <h1 className="font-bold text-center p-4 text-lg">Lista de tarefas</h1>
-
       <TaskInput />
 
       <div className="flex items-center mt-3 mb-3 justify-end h-14">
@@ -37,7 +36,7 @@ const TaskCard = () => {
           <option value="finished">Finalizadas</option>
         </select>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 overflow-auto max-h-72 p-3">
         {filteredTasks.map((task) => (
           <TaskComponent key={task.id} task={task} />
         ))}
