@@ -20,6 +20,7 @@ const TaskInput = () => {
         className="border-black shadow-md p-1 rounded-md flex-1"
         type="text"
         value={newTaskDescription}
+        placeholder="Digite a descrição da tarefa a ser adicionada"
         onChange={handleSetNewTaskDescription}
       />
       <Button title="Adicionar" onClick={handleAddNewTask}/>

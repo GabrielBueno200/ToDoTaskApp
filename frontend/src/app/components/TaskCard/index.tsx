@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AiFillFilter } from "react-icons/ai";
 import TaskContext from "../../contexts/TaskContext";
 import TaskComponent from "../TaskComponent";
@@ -14,6 +14,10 @@ const TaskCard = () => {
   >("all");
 
   const [descriptionFilter, setDescriptionFilter] = useState("");
+
+  useEffect(() => {
+    setFilterOption("all");
+  }, [descriptionFilter]);
 
   const handleSetDescriptionFilter = (e: React.ChangeEvent<HTMLInputElement>) =>
     setDescriptionFilter(e.target.value);
