@@ -52,9 +52,13 @@ const TaskCard = () => {
           placeholder="Digite a tarefa a ser pesquisada..."
           onChange={handleSetDescriptionFilter}
         />
-        <div className="flex">
+        <div className="flex items-center gap-2">
           <AiFillFilter size={24} />
-          <select onChange={handleSetStatusFilterOption} value={statusFilterOption}>
+          <select
+            onChange={handleSetStatusFilterOption}
+            value={statusFilterOption}
+            className="shadow-md p-1 rounded-md"
+          >
             <option value="all">Todas</option>
             <option value="pendent">Pendentes</option>
             <option value="finished">Finalizadas</option>
