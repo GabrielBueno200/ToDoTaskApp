@@ -22,18 +22,12 @@ interface ITaskContextProps {
   removeTask: (taskId: number) => Promise<void>;
   updateTask: (task: Task) => Promise<void>;
   addTask: (task: Task) => Promise<void>;
-  statusToFilter?: boolean;
-  setStatusToFilter: Dispatch<SetStateAction<boolean | undefined>>;
 }
 
 const TaskContext = createContext<ITaskContextProps>({} as ITaskContextProps);
 
 export const TaskContextProvider = ({ children }: { children: ReactNode }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
-
-  const [statusToFilter, setStatusToFilter] = useState<boolean | undefined>(
-    undefined
-  );
 
   const finishedTasks = tasks?.filter(task => task.isFinished)
   const pendentTasks = tasks?.filter(task => !task.isFinished)
@@ -74,9 +68,7 @@ export const TaskContextProvider = ({ children }: { children: ReactNode }) => {
     setTasks,
     addTask,
     removeTask,
-    updateTask,
-    statusToFilter,
-    setStatusToFilter,
+    updateTask
   };
 
   return (
