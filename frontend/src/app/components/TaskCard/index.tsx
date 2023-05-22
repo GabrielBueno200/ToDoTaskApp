@@ -13,8 +13,19 @@ const TaskCard = () => {
     "finished" | "pendent" | "all"
   >("all");
 
+  const [descriptionFilter, setDescriptionFilter] = useState("");
+
+  const handleSetDescriptionFilter = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setDescriptionFilter(e.target.value);
+
+  const tasksFilteredByDescription = tasks.filter((task) =>
+    task.description.toLowerCase().includes(descriptionFilter.toLowerCase())
+  );
+
   const filteredTasks =
-    filterOption === "finished"
+    descriptionFilter.length > 0
+      ? tasksFilteredByDescription
+      : filterOption === "finished"
       ? finishedTasks
       : filterOption === "pendent"
       ? pendentTasks
@@ -28,15 +39,24 @@ const TaskCard = () => {
       <h1 className="font-bold text-center p-4 text-lg">Lista de tarefas</h1>
       <TaskInput />
 
-      <div className="flex items-center mt-3 mb-3 justify-end h-14">
-        <AiFillFilter size={24} />
-        <select onChange={handleSetFilterOption} value={filterOption}>
-          <option value="all">Todas</option>
-          <option value="pendent">Pendentes</option>
-          <option value="finished">Finalizadas</option>
-        </select>
+      <div className="flex items-center mt-3 mb-3 h-14 justify-between">
+        <input
+          className="border-black shadow-md p-1 rounded-md w-72"
+          type="text"
+          value={descriptionFilter}
+          placeholder="Digite a tarefa a ser pesquisada..."
+          onChange={handleSetDescriptionFilter}
+        />
+        <div className="flex">
+          <AiFillFilter size={24} />
+          <select onChange={handleSetFilterOption} value={filterOption}>
+            <option value="all">Todas</option>
+            <option value="pendent">Pendentes</option>
+            <option value="finished">Finalizadas</option>
+          </select>
+        </div>
       </div>
-      <div className="flex flex-col gap-2 overflow-auto max-h-72 p-3">
+      <div className="flex flex-col gap-2 overflow-auto max-h-72 pr-3">
         {filteredTasks.map((task) => (
           <TaskComponent key={task.id} task={task} />
         ))}
