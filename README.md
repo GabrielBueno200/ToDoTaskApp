@@ -66,3 +66,4 @@ O projeto se trata da implementação de uma lista de tarefas a fazer (to do lis
   npm i 
   npm start
   ```
+  - Após executar o frontend, basta abrir o seu navegador e acessar o sistema através da url "http://localhost:3000/"
