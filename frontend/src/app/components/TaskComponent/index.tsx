@@ -16,7 +16,10 @@ const TaskComponent = ({ task }: ITaskComponentProps) => {
 
   const handleIsEditing = (value: boolean) => setIsEditing(value);
 
-  const handleDeleteTask = () => removeTask(task.id!);
+  const handleDeleteTask = () => {
+    // eslint-disable-next-line no-restricted-globals
+    confirm("Você realmente deseja remover esta tarefa") && removeTask(task.id!);
+  };
 
   return !isEditing ? (
     <div className="flex items-center gap-2">
