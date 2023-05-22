@@ -18,7 +18,8 @@ const TaskComponent = ({ task }: ITaskComponentProps) => {
 
   const handleDeleteTask = () => {
     // eslint-disable-next-line no-restricted-globals
-    confirm("Você realmente deseja remover esta tarefa") && removeTask(task.id!);
+    confirm("Você realmente deseja remover esta tarefa") &&
+      removeTask(task.id!);
   };
 
   return !isEditing ? (
