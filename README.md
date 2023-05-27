@@ -44,7 +44,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## 💻 Sobre o projeto
-O projeto se trata da implementação de uma lista de tarefas a fazer (to do list), possuindo métodos de CRUD para esse fim. O projeto contempla tanto back quanto frontend.
+O projeto se trata da implementação de uma lista de tarefas a fazer (to do list), possuindo métodos de CRUD para esse fim. O projeto contempla tanto back quanto frontend. Este projeto faz parte do desafio técnico proposto pela FI Group para Fullstack Developer .NET/React, descrito na <a href="https://github.com/GabrielBueno200/ToDoTaskApp/wiki">Wiki</a> deste repositório.
 
 ![image](https://github.com/GabrielBueno200/ToDoTaskApp/assets/56837996/e8172eb6-9792-4155-9a7f-80ed18d5e1a7)
 
