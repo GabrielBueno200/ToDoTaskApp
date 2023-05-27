@@ -1,5 +1,5 @@
 using ToDoApp.Api.Routes;
-using ToDoApp.CrossCutting.IoC;
+using ToDoApp.Infrastructure.CrossCutting.IoC;
 using ToDoApp.Api.Extensions;
 using ToDoApp.Infrastructure.Persistence.Extensions;
 using ToDoApp.Api.Middlewares;

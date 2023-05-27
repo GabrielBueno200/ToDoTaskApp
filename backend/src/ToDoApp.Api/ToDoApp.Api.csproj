@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ToDoApp.Application\ToDoApp.Application.csproj" />
-    <ProjectReference Include="..\ToDoApp.CrossCutting.IoC\ToDoApp.CrossCutting.IoC.csproj" />
+    <ProjectReference Include="..\ToDoApp.Infrastructure.CrossCutting.IoC\ToDoApp.Infrastructure.CrossCutting.IoC.csproj" />
     <ProjectReference Include="..\ToDoApp.Infrastructure.Persistence\ToDoApp.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 </Project>
