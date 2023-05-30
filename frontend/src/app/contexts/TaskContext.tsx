@@ -19,9 +19,9 @@ interface ITaskContextProps {
   finishedTasks: Task[];
   pendentTasks: Task[];
   setTasks: Dispatch<SetStateAction<Task[]>>;
-  removeTask: (taskId: number) => Promise<void>;
-  updateTask: (task: Task) => Promise<void>;
-  addTask: (task: Task) => Promise<void>;
+  removeTask: (taskId: number) => void;
+  updateTask: (task: Task) => void;
+  addTask: (task: Task) => void;
 }
 
 const TaskContext = createContext<ITaskContextProps>({} as ITaskContextProps);
@@ -36,13 +36,13 @@ export const TaskContextProvider = ({ children }: { children: ReactNode }) => {
     getTasksAsync().then(setTasks);
   }, []);
 
-  const addTask = async (taskToCreate: Task): Promise<void> => {
+  const addTask = (taskToCreate: Task) => {
     addTaskAsync(taskToCreate).then((createdTask) =>
       setTasks([...tasks, createdTask])
     );
   };
 
-  const removeTask = async (taskId: number): Promise<void> => {
+  const removeTask = (taskId: number) => {
     deleteTaskAsync(taskId).then(() =>
       setTasks((previousTasks) =>
         previousTasks.filter((task) => task.id !== taskId)
@@ -50,7 +50,7 @@ export const TaskContextProvider = ({ children }: { children: ReactNode }) => {
     );
   };
 
-  const updateTask = async (updatedTask: Task): Promise<void> => {
+  const updateTask = (updatedTask: Task) => {
     updateTaskAsync(updatedTask).then(() =>
       setTasks((previousTasks) =>
         previousTasks.map((task) => {
