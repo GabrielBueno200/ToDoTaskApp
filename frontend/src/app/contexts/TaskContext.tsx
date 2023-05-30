@@ -29,8 +29,8 @@ const TaskContext = createContext<ITaskContextProps>({} as ITaskContextProps);
 export const TaskContextProvider = ({ children }: { children: ReactNode }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
 
-  const finishedTasks = tasks?.filter(task => task.isFinished)
-  const pendentTasks = tasks?.filter(task => !task.isFinished)
+  const finishedTasks = tasks?.filter((task) => task.isFinished);
+  const pendentTasks = tasks?.filter((task) => !task.isFinished);
 
   useEffect(() => {
     getTasksAsync().then(setTasks);
@@ -68,7 +68,7 @@ export const TaskContextProvider = ({ children }: { children: ReactNode }) => {
     setTasks,
     addTask,
     removeTask,
-    updateTask
+    updateTask,
   };
 
   return (

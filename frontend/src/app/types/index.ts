@@ -1,5 +1,5 @@
 export type Task = {
-    id?: number,
-    description: string,
-    isFinished: boolean
+  id?: number;
+  description: string;
+  isFinished: boolean;
 };

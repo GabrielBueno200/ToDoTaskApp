@@ -9,7 +9,8 @@ type filterOptions = "finished" | "pendent" | "all";
 const TaskCard = () => {
   const { tasks, pendentTasks, finishedTasks } = useContext(TaskContext);
 
-  const [statusFilterOption, setStatusFilterOption] = useState<filterOptions>("all");
+  const [statusFilterOption, setStatusFilterOption] =
+    useState<filterOptions>("all");
 
   const [descriptionFilter, setDescriptionFilter] = useState("");
 

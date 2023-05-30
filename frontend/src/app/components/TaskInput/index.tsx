@@ -23,7 +23,7 @@ const TaskInput = () => {
         placeholder="Digite a descrição da tarefa a ser adicionada"
         onChange={handleSetNewTaskDescription}
       />
-      <Button title="Adicionar" onClick={handleAddNewTask}/>
+      <Button title="Adicionar" onClick={handleAddNewTask} />
     </div>
   );
 };
